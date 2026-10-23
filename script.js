@@ -45,7 +45,7 @@ let numbers = [];
 //         a) Use prompt() to ask "Enter number " + (i + 1)
 //         b) Use parseFloat() to convert the input to a number
 //         c) Use .push() to add the number to the array
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     numbers.push(parseFloat(prompt("Enter number ")) + (i + 1));
 }
 
@@ -61,7 +61,7 @@ for (let i = 0; i < 4; i++) {
 let nums = ""
 for (let i = 0; i < numbers.length; i++) {
     if (i === 0) {
-        nums = nums + i
+        nums = nums + numbers[i]
     } else {
         nums = nums + ", " + numbers[i]
     }
@@ -90,7 +90,7 @@ console.log("Average: " + average)
 //         Print: console.log("Even count: " + count)
 let count = 0;
 for (let i = 0; i < numbers.length; i++) {
-    if (i % 2 === 0) {
+    if (numbers[i] % 2 === 0) {
         count ++;
     }
 }
@@ -100,7 +100,7 @@ console.log("Even count: " + count)
 //         Start with the first number as the largest.
 //         Loop through the rest and update if you find a bigger one.
 //         Print: console.log("Largest: " + largest)
-let max = 0
+let max = numbers[0]
 for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > max) {
         max = numbers[i]
